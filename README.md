@@ -29,10 +29,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+"If the page has data that changes over time at high rates (for example, lots of people commenting on a post, likes being generated etc), then there is a requirement for DOM updates to be very fast and also reflect in other parts of the UI if they use the same data.
+
+React solves this problem, without even having the page reload. It does by a concept called virtual DOM. When a page is rendered using React, the state of the DOM tree structure/hierarchy is stored, and when there any updates to be made to the UI, it does a diff on the previous (old) DOM tree with the new one, and updates only the ones that have changed. In this way, lots of DOM operations/refreshes are reduced, improving performance considerably." 
+- https://scotch.io/@anitashah/what-problems-does-reactjs-solve-when-must-you-select-reactjs?utm_campaign=Submission&utm_medium=Community&utm_source=GrowthHackers.com
 
 1. Describe component state.
+setState() schedules an update to a component’s state object. When state changes, the component responds by re-rendering.
 
 1. Describe props.
+“Props” is a special keyword in React, which stands for properties and is being used for passing data from one component to another. Furthermore, props data is read-only, which means that data coming from the parent should not be changed by child components,'
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 
@@ -98,7 +104,7 @@ After finishing your required elements, you can push your work further. These go
 - [ ] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
-- [ ] Create transitions or animations with styled-components.
+- [X] Create transitions or animations with styled-components.
 
 ## Submission format
 

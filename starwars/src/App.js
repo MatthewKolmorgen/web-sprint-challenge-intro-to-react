@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import CharacterComponents from './components/Character';
 import './App.css';
 
+
 const Header = styled.h1`
   width: 100%;
 `

@@ -2,33 +2,44 @@
 
 // Write your Character component here
 import React from "react";
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import '../App.css';
 
 
 
+const kf = keyframes `
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+`
+
 //Container Styling
 const MainContainer = styled.div`
-width: 80%;
-margin: 0 auto;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-align-items: center;
-font-size: 3rem;
-}
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    }
 `;
 
 //Character Card Styles
 const CharacterCards = styled.div`
-border: 1px solid white;
-width: 80%;
-margin: 2rem;
-background-color: #191919;
-color: whitesmoke;
-border-radius: 1%;
+    border: 2px solid white;
+    width: 80%;
+    margin: 2rem;
+    color: whitesmoke;
+    background-color: black;
+    opacity: 0;
+    transform: scale(10) rotateZ(180deg);
+    animation: ${kf} .5s ease-in-out forwards;
+    }
 `;
 
+//creating my function
 const CharacterComponents = (props) => {
     const {characters} = props;
         return (
